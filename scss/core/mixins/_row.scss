@@ -43,13 +43,13 @@
 }
 
 
-@mixin make-flex-row($gutter: $grid-gutter) {
+@mixin make-flex-row($gutter: $grid-gutter, $prefix: $set-prefix) {
   %bilateral-margin {
     margin-left: em-calc($gutter / -2);
     margin-right: em-calc($gutter / -2);
   }
 
-  .flex-row {
+  .#{$prefix}flex-row {
     @extend %bilateral-margin;
     display: flex;
     flex-wrap: wrap;
